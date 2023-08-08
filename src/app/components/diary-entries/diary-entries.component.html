@@ -1,0 +1,18 @@
+<ul *ngFor="let data of entries | async let i = index">
+  <div class="text-left text-2xl mx-64 display: flex my-8 bg-amber-50">
+    <div class="w-4/5 left-0 m-6">
+      <p>
+        Запись создана: {{data.time.seconds*1000 | date: 'yyyy/MM/dd'}}, {{data.time.seconds*1000 | date:'h:mm:ss a'}}
+      </p>
+      <p class="bg-amber-100 my-8">
+        {{data.str}}
+      </p>
+        <a class="bg-amber-300 mr-6 p-2" routerLink="/edit/{{data.id}}">Редактировать</a>
+        <button class="bg-amber-300 p-2" (click)="deleteData(data.id)">Удалить</button>
+    </div>
+    <div class="right-0 w-2/12 m-6">
+      <img [src]="data.img">
+    </div>
+  </div>
+</ul>
+

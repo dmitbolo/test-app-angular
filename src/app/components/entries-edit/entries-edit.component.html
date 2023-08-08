@@ -1,0 +1,18 @@
+<div class="text-left text-2xl px-32 display: flex py-8">
+  <div class="w-4/5 left-0">
+    <form #f="ngForm" (ngSubmit)="updateData(f)">
+      <input     type="str"
+                 class="border py-2 px-4 mb-2"
+                 [value]="updatedEntries.str"
+                 name = "str" ngModel>
+      <br>
+      <input type="img"
+             class="border py-2 px-4 mb-2"
+             placeholder="Ссылка на изображение"
+             [value]="updatedEntries.img"
+             name = "img" ngModel>
+      <br>
+      <button type="submit">Редактировать</button>
+    </form>
+  </div>
+</div>

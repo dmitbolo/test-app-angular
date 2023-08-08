@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "test-application-f29d7": {
+      "hosting": {
+        "testDb": [
+          "test-application1352371edid"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "test-application-f29d7"
+  }
+}
